@@ -1,7 +1,10 @@
 <?php
 /*
  ======================================================================
- Retweeter 1.1 - Creating Twitter Groups
+ Retweeter 1.1.2 - Creating Twitter Groups
+ 
+ 1.1.2 Update: Just adding more error output when script is run in browser. 
+	   No need to update if you're not having issues. 
  
  1.1.1 Update: Twitter's tweet IDs and user IDs have grown in length such
        that the existing database column for PostId (which is a combination
