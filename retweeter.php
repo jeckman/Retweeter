@@ -186,7 +186,10 @@ if ($responseCode == 200)
 		} // end if for != $username
 
 	} // end for each status
-} // end if Status Code 200
+} else {
+	echo '<p>Getting tweets failed, with status code ' . $responseCode . '</p>';
+	echo '<p>Entire response was: '. print_r($buffer,true) .'</p>';
+}// end if Status Code 200
 		
 // Now we'll go and check the db for tweets which have not yet been retweeted
 
@@ -233,6 +236,7 @@ while($row = mysql_fetch_array($result))
 		$my_retweet_result = mysql_query($myQuery) or die('Could not update tweeted date' . mysql_error());
   } else {
     echo '<p>Re-tweet failed, with status code ' . $responseCode . '</p>';
+	echo '<p>Entire response was: '. print_r($buffer,true) .'</p>';
   }
 }
 ?>

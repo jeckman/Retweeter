@@ -1,4 +1,6 @@
 <?php
+
+// See http://oauth.googlecode.com/svn/code/php/ 
 // vim: foldmethod=marker
 
 if (!class_exists('OAuthException')) {
